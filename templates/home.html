@@ -3,11 +3,11 @@
 {% block title %}Bosh sahifa{% endblock title %}
 {% block content %}
     {% if user.is_authenticated %}
-        {{ user.username }}!
+        {{ user.first_name | title }}!
         <p><a href="{% url 'logout' %}">Chiqib ketish</a></p>
     {% else %}
         <p>Saytga kirmagansiz</p>
-        <a href="{% url 'login' %}">Kirish</a>
+        <a href="{% url 'login' %}">Kirish</a> |
         <a href="{% url 'signup' %}">Ro'yhatdan o'tish</a>
     {% endif %}
 {% endblock content %}

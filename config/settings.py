@@ -37,8 +37,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
+    # tashqi applar(paketlar)
+    'crispy_forms',
+    # men o'zim yaratgan applar
     'accounts',
+    'pages',
 ]
 
 MIDDLEWARE = [
@@ -105,7 +108,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ru'
 
 TIME_ZONE = 'UTC'
 
@@ -131,3 +134,5 @@ AUTH_USER_MODEL = 'accounts.CustomUser'
 # foydalanuvchi sahifaga ruyhatdan utib kirsa yoki chiqib ketsa avtomatik home pagega o'tadi
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
