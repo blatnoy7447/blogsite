@@ -131,6 +131,19 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = 'accounts.CustomUser'
 
+# EMAIL BACKEND demo
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+# pullik emailga password reset yuborish xizmati
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# DEFAULT_FROM_EMAIL = 'example@mail.com'
+# EMAIL_HOST = 'smtp'
+# EMAIL_HOST_USER = 'username'
+# EMAIL_HOST_PASSWORD = 'password'
+# EMAIL_PORT = 587
+# EMAIL_USE_TLS = True
+
+
 # foydalanuvchi sahifaga ruyhatdan utib kirsa yoki chiqib ketsa avtomatik home pagega o'tadi
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'
