@@ -5,7 +5,7 @@
         <div class="card">
             <div class="card-body">
                 {% if object.photo %}
-                    <img class="card-img-top" src="{{ object.photo}}" alt="{{ object.title }}">
+                    <img class="card-img-top" src="{{ object.photo.url }}" alt="{{ object.title }}">
                 {% endif %}
                 <h1 class="card-title">{{ object.title }}</h1>
                 <h6 class="card-subtitle mb-2 text-muted">Muallif: {{ object.author }}{{ object.date }}</h6>
