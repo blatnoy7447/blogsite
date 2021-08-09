@@ -53,4 +53,3 @@ class ArticleCreateView(LoginRequiredMixin, UserPassesTestMixin, CreateView):
     # user superuser ekanini tekshirish
     def test_func(self):
         return self.request.user.is_superuser
-

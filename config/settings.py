@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # tashqi applar(paketlar)
     'crispy_forms',
+    'ckeditor',
+    'ckeditor_uploader',
     # men o'zim yaratgan applar
     'accounts',
     'pages',
@@ -124,6 +126,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_FILES_DIRS = [str(BASE_DIR.joinpath('static'))]
+STATIC_ROOT = str(BASE_DIR.joinpath('staticfiles'))
+STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
@@ -154,3 +159,14 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 # MEDIA
 MEDIA_URL = '/media/'
 MEDIA_ROOT = str(BASE_DIR.joinpath('media'))
+
+# CKEDITOR CONFIGS
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'Basic',
+    },
+}
+
+CKEDITOR_UPLOAD_PATH = "uploads/"
+# foydalanuvchi qaysi fayllarni yuklagan bo'lsa usha fayllarni ko'rishi mumkin bo'ladi
+CKEDITOR_RESTRICT_BY_USER = True
