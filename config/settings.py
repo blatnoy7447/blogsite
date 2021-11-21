@@ -31,7 +31,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'ckeditor',
     'ckeditor_uploader',
-    # men o'zim yaratgan applar
+    # o'zim yaratgan applar
     'accounts',
     'pages',
     'articles',
